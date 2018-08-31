@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>演示thymeleaf技术-user信息展示</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.css}" href="../static/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.css}" href="../static/bootstrap/css/bootstrap-theme.css" rel="stylesheet"/>
+    <script th:src="@{/bootstrap/js/bootstrap.js}" src="../static/bootstrap/js/bootstrap.js"></script>
+    <script th:src="@{/bootstrap/js/jquery-3.3.1.min.js}" src="../static/bootstrap/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel-primary">
+                <div class="panel-heading text-center">
+                    <span class="panel-title">学生信息</span>
+                </div>
+                <div class="panel-body">
+                    编号:<span th:text="#{user.id}">2</span><br>
+                    姓名:<span th:text="#{user.name}">溜溜哒</span><br>
+                    性别:<span th:text="#{user.gender}">男</span><br>
+                    年龄:<span th:text="#{user.age}">20</span><br>
+                    电话:<span th:text="#{user.telephone}">119</span><br>
+                </div>
+                <div class="panel-footer text-left">
+                    <span class="panel-title">天堂会所二号技师@666</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

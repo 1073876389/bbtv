@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>thymeleaf模板技术demo</title>-->
+<!--</head>-->
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"href="../../css/gtvg.css" data-th-href="@{/css/gtvg.css}" />
+</head>
+<body>
+<!--在这两种形式(data-th-* 与 th:* )是完全等同的并且是可互换的，但为了使我们的示例代
+码简单和紧凑，本教程将使⽤命名空间符号（th：*）这种形式。 此
+外，th：*符号在每个Thymeleaf模板模式（XML，TEXT ...）中更为
+通⽤，⽽data-这种形式只允许在HTML模式下使⽤。 -->
+<p data-th-text="#{user.name}">Welcome to our grocery store!</p>
+<h1>hello world <span th:text="${name}"></span>,你好!!!</h1>
+</body>
+</html>
