@@ -15,10 +15,8 @@ import java.util.HashMap;
  */
 @Configuration
 public class DruidConfiguration {
-
     @Bean
     public ServletRegistrationBean druidServlet(){
-        //log.info("init Druid Servlet Configuration");
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
         servletRegistrationBean.setServlet(new StatViewServlet());
         servletRegistrationBean.addUrlMappings("/druid/*");
@@ -31,7 +29,6 @@ public class DruidConfiguration {
         //IP白名单("不配置为空,则永续所有访问")
         initParameters.put("allow","");
         //IP黑名单(与白名单共同存在时,deny优先于allow)
-        // initParameters.put("deny","");
         servletRegistrationBean.setInitParameters(initParameters);
         return servletRegistrationBean;
     }

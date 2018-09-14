@@ -16,5 +16,7 @@
 通⽤，⽽data-这种形式只允许在HTML模式下使⽤。 -->
 <p data-th-text="#{user.name}">Welcome to our grocery store!</p>
 <h1>hello world <span th:text="${name}"></span>,你好!!!</h1>
+以下方式是通过session直接获取对应的值
+<h1>hello session <span th:text="${session.username}"></span>,你好!!!</h1>
 </body>
 </html>

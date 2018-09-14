@@ -4,6 +4,8 @@ server:
 
 #=======================================spring配置=======================================
 spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/bbtv?haracterEncoding=utf8&useSSL=true
@@ -11,10 +13,6 @@ spring:
     password: admin
     driver-class-name: com.mysql.jdbc.Driver
     druid:
-#      url: jdbc:mysql://localhost:3306/bbtv?useUnicode=true&useSSL=true&autoReconnect=true
-#      username: root
-#      password: admin
-#      driverClassName: com.mysql.jdbc.Driver
       #最大活跃数
       max-active: 20
       #初始化数量
@@ -36,6 +34,10 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+#  security:
+#    user:
+#      name: 1024
+#      password: 1024
 #  mvc:
 #    view:
 #      prefix: WEB-INF/jsp
@@ -46,7 +48,7 @@ spring:
     encoding: UTF-8
     #开发时关闭缓存,不然没办法看见实时页面
     cache: false
-    prefix: classpath:/templates
+    prefix: classpath:/templates/
     servlet:
       content-type: text/html
 

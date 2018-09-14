@@ -1,6 +1,7 @@
 package com.xuwenxing.bbtv.util;
 
 import com.xuwenxing.bbtv.domain.system.User;
+import com.xuwenxing.bbtv.domain.vo.VerifyCodeVo;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -25,11 +26,11 @@ public class UserContext {
         return (User) getRequest().getSession().getAttribute(CURRENT_IN_SESSION);
     }
 
-//    public static void setVerifyCode(VerifyCodeVo verifyCode) {
-//        getRequest().getSession().setAttribute(VERIFYCODE_IN_SESSION, verifyCode);
-//    }
-//
-//    public static VerifyCodeVo getVerifyCode() {
-//       return (VerifyCodeVo) getRequest().getSession().getAttribute(VERIFYCODE_IN_SESSION);
-//    }
+    public static void setVerifyCode(VerifyCodeVo verifyCode) {
+        getRequest().getSession().setAttribute(VERIFYCODE_IN_SESSION, verifyCode);
+    }
+
+    public static VerifyCodeVo getVerifyCode() {
+       return (VerifyCodeVo) getRequest().getSession().getAttribute(VERIFYCODE_IN_SESSION);
+    }
 }

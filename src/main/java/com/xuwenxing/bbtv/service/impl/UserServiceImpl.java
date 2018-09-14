@@ -3,6 +3,7 @@ package com.xuwenxing.bbtv.service.impl;
 import com.xuwenxing.bbtv.dao.UserMapper;
 import com.xuwenxing.bbtv.domain.system.User;
 import com.xuwenxing.bbtv.service.UserService;
+import com.xuwenxing.bbtv.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,6 +53,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User userLogin(String username, String password) {
         User user =userMapper.userLogin(username,password);
+        UserContext.setCurrent(user);
         return user ;
     }
 }
